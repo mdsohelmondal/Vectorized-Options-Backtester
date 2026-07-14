@@ -14,12 +14,12 @@ To simulate realistic institutional conditions, the architecture avoids iterativ
 *   **Selection Logic:** The module dynamically identifies and shorts one Call Option (CE) and one Put Option (PE) whose 1-minute closing prices are closest to a target premium of Rs. 50.
 
 ### 2. Signal Generation & Execution Module
-*   **Execution Timeline:** Positions are entered at the 09:20 AM 1-minute close price and systematically liquidated at the 15:20 PM 1-minute close price[cite: 1].
-*   **Intraday Risk Controls:** A strict 50% hard stop-loss is placed on the entry premium of each individual leg[cite: 1]. The engine scans high-frequency "High" column data continuously to accurately flag stop-loss breach violations[cite: 1].
+*   **Execution Timeline:** Positions are entered at the 09:20 AM 1-minute close price and systematically liquidated at the 15:20 PM 1-minute close price.
+*   **Intraday Risk Controls:** A strict 50% hard stop-loss is placed on the entry premium of each individual leg. The engine scans high-frequency "High" column data continuously to accurately flag stop-loss breach violations.
 
 ### 3. Position Sizing & Calendar Module
-*   **Risk Allocation:** Modeled with a fixed allocation of exactly 1 lot (lot size of 15) per day with no capital compounding[cite: 1].
-*   **Calendar Boundaries:** The framework restricts trading strictly to Week 1 data while programmatically treating Wednesday as the contract expiry day[cite: 1].
+*   **Risk Allocation:** Modeled with a fixed allocation of exactly 1 lot (lot size of 15) per day with no capital compounding.
+*   **Calendar Boundaries:** The framework restricts trading strictly to Week 1 data while programmatically treating Wednesday as the contract expiry day.
 
 ---
 
@@ -28,23 +28,22 @@ To simulate realistic institutional conditions, the architecture avoids iterativ
 The engine generates a structured analytical suite across three core layers:
 
 ### 1. Detailed Trade Sheet
-Compiles comprehensive granular execution metadata for every trade, including[cite: 1]:
-*   Execution Timestamps (Entry/Exit Dates and Times)[cite: 1].
-*   Option Ticker strings, Strike Prices, and Option Types (CE/PE)[cite: 1].
-*   Entry/Exit Prices and localized transaction values (Price × Quantity)[cite: 1].
-*   Gross P&L, running Cumulative P&L, daily Available Capital, and the underlying Banknifty spot closing price[cite: 1].
+Compiles comprehensive granular execution metadata for every trade, including:
+*   Execution Timestamps (Entry/Exit Dates and Times).
+*   Option Ticker strings, Strike Prices, and Option Types (CE/PE).
+*   Entry/Exit Prices and localized transaction values (Price × Quantity).
+*   Gross P&L, running Cumulative P&L, daily Available Capital, and the underlying Banknifty spot closing price.
 
 ### 2. Statistical Analysis Matrix
-Calculates essential portfolio risk and return metrics[cite: 1]:
-*   **CAGR** (Compound Annual Growth Rate) and **Maximum Drawdown** tracking[cite: 1].
-*   **Win/Loss Distributions:** Total count and percentage of winning vs. losing trades categorized by CE, PE, and combined portfolios[cite: 1].
-*   **Regime Performance:** Average % P&L for CE and PE legs isolated across Expiry Days vs. Non-Expiry Days[cite: 1].
+Calculates essential portfolio risk and return metrics:
+*   **CAGR** (Compound Annual Growth Rate) and **Maximum Drawdown** tracking.
+*   **Win/Loss Distributions:** Total count and percentage of winning vs. losing trades categorized by CE, PE, and combined portfolios.
+*   **Regime Performance:** Average % P&L for CE and PE legs isolated across Expiry Days vs. Non-Expiry Days.
 
 ### 3. Visual Portfolio Modeling
-*   **Trade-Wise Equity Curve:** Plots portfolio trajectory over time derived from a base NAV of 100[cite: 1].
-*   **Drawdown Visualizations:** A continuous time-series chart mapping capital drawdowns relative to historical equity peaks[cite: 1].
-*   **Monthly Returns Matrix:** A structured table tracking percentage performance shifts computed from month-on-month ending NAV figures[cite: 1].
-
+*   **Trade-Wise Equity Curve:** Plots portfolio trajectory over time derived from a base NAV of 100.
+*   **Drawdown Visualizations:** A continuous time-series chart mapping capital drawdowns relative to historical equity peaks.
+*   **Monthly Returns Matrix:** A structured table tracking percentage performance shifts computed from month-on-month ending NAV figures.
 ---
 
 ## Repository Structure
