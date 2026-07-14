@@ -57,4 +57,5 @@ Calculates essential portfolio risk and return metrics:
 │   └── analytics.py       # Risk matrices, NAV tracking, and plotting functions
 ├── main.py                # Pipeline execution entry point
 ├── requirements.txt       # Environment dependencies
+├── LICENSE
 └── README.md
