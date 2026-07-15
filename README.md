@@ -60,7 +60,6 @@ To run the backtesting suite locally on your computer, you must configure a loca
 
 ## Repository Structure
 ```text
-├── data/                  # Local historical data directory (Git-ignored)
 ├── outputs/               # Generated Trade Sheets, Statistics, and Performance Charts
 ├── src/
 │   ├── __init__.py
