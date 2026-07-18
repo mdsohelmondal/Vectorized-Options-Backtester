@@ -1,6 +1,6 @@
 import pandas as pd
 
-def load_and_preprocess_data(options_path='data/Options_data_2023.csv', spot_path='data/BANKNIFTY_SPOT.csv'):
+def load_and_preprocess_data(options_path, spot_path):
     """Reads raw options and spot data, normalizes timestamps, and prepares base DataFrames."""
     data = pd.read_csv(options_path)
     spot_data = pd.read_csv(spot_path)
